@@ -10,14 +10,14 @@ are usually addressed by careful initialization and **small learning rates**.
 
 ## How and Why
 - Normalize each scalar feature independently, by making it have the mean of zero and the variance of 1.
-- Introduce, for each activation $$x^(k)$$, a pair of parameters $$\gamma^(k)$$ and $$\beta^(k)$$, which scale and shift the normalized value: $$y^(k) = \gamma^(k)x^(k) + \beta^(k)$$.
+- Introduce, for each activation $$x^(k)$$, a pair of parameters $$\gamma^{(k)}$$ and $$\beta^{(k)}$$, which scale and shift the normalized value: $$y^{(k)} = \gamma^{(k)}x^{(k)} + \beta^{(k)}$$.
 Because simply normalizing each input of a layer may change what the layer can represent. For instance, normalizing the inputs of a sigmoid would constrain them to the linear
 regime of the linear regime of the nolinearity. By do that, we can make sure that the transformation inserted the network can represent the identity transform, and preserves
 the network capacity.
 - Each mini-batch produces estimates of the mean and variance of each activation. The use of mini-batcches is enabled by computation of per-dimension variances rather than joint
 covariances.
 - The means and variances are fixed during inference. we use the normalization using the populations, rather than mimi-batch, statistics.
-- We add the BN transform immediately before the nonlinearity, by normalizing $x = Wu+b$. $Wu+b$ is more likely to have a symmetric, non-sparse distribution, that is "more
+- We add the BN transform immediately before the nonlinearity, by normalizing $$x = Wu+b$$. $$Wu+b$$ is more likely to have a symmetric, non-sparse distribution, that is "more
 Gaussian", normalizing it is likely to produce activations with a stable distribution.
 
 ## Advantages of the method
