@@ -28,3 +28,5 @@ nonlinearities.
 - Batch Normalization adds only two extra parameters per activation, and in doing so perseves the representation ability of the network.
 - Batch Normalization regularizes the model. A training example is seen in conjunction with other examples in the mini-batch, and the training network no longer producing
 deterministic values for a given training example.
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
