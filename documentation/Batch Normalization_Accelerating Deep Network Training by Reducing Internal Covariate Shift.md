@@ -4,7 +4,7 @@
 - **internal covariate shift** : The training of deep neuron network is complicated by the fact that the inputs to each layer are affected by the parameters of all preceding
 layers - so that small changes to the network parameters amplify as the network becomes deeper. The change in the distributions of layers' inputs presents a problem because 
 the layers need to continuously adapt to the new distribution.
-- **the saturation problem** : Consider a layer with a sigmoid activation $z = g(Wu+b)$ . As |x| increases, g'(x) tends to zero. This means that for all dimensions of $x = Wu+b$ 
+- **the saturation problem** : Consider a layer with a sigmoid activation $$z = g(Wu+b)$$ . As |x| increases, g'(x) tends to zero. This means that for all dimensions of $x = Wu+b$ 
 except those with small absolute values, the gradient flowing down to u will vanish and the model will train slowly. The saturation problem and the resulting vanishing gradients
 are usually addressed by careful initialization and **small learning rates**.
 
@@ -19,6 +19,7 @@ covariances.
 - The means and variances are fixed during inference. we use the normalization using the populations, rather than mimi-batch, statistics.
 - We add the BN transform immediately before the nonlinearity, by normalizing $x = Wu+b$. $Wu+b$ is more likely to have a symmetric, non-sparse distribution, that is "more
 Gaussian", normalizing it is likely to produce activations with a stable distribution.
+
 ## Advantages of the method
 - Batch Normalization enables higher learning rates and then accelerate the training of deep networks. In traditional deep networks, too-high learning rate may result in the
 gradients that explode or vanish, as well as getting stuck in pool local minima. By mormalization activations throughout the network, it prevents small changes to the parameters
