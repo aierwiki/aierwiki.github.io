@@ -15,8 +15,7 @@ explicitly training to predict predefined  sense class.
 probability of token $$t_k$$ given the history ($$t_1,...,t_{k-1}$$):
 $$p(t_1, t_2, ..., t_N) = \prod_{k=1}^{N}p(t_k|t_1,t_2,...,t_{k-1})$$.
 - Our formulation jointly maximizes the log likehood of the forward and backward directions:
-$$\prod_{k=1}^N(log p(t_k|t_1,...,t_{k-1};\Theta^x,\overrightarrow{\Theta}_{LSTM},\Theta_s) 
-+ (log p(t_k|t_{k+1},...,t_N;\Theta^x,\overleftarrow{\Theta}_{LSTM},\Theta_s)).$$
+$$\prod_{k=1}^N(log p(t_k|t_1,...,t_{k-1};\Theta^x,\overrightarrow{\Theta}_{LSTM},\Theta_s) + (log p(t_k|t_{k+1},...,t_N;\Theta^x,\overleftarrow{\Theta}_{LSTM},\Theta_s)).$$
 - We tie the parameters for both the token representation ($$\Theta_x$$) and Softmax layer ($$\Theta_s$$) in the forward and backward direction while maintaining separate
 parameters for the LSTMs in each direction.
 - **ELMo** is a task specific combination of the intermediate layer representations in the biLM.
@@ -35,3 +34,5 @@ representation $$[x_k;ELMo_k^{task}]$$ into the task RNN. As the remainder of th
 - significantly improves the state of the art of a broad range of NLP tasks.
 - The biLM layers efficiently encode different types of synmatic and semantic information about words-in-context
 - ELMo-enhanced models use smaller training sets more efficiently than models without ELMo.
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
