@@ -1,7 +1,7 @@
 layout: page
-title: "POST TITLE"
-date: YYYY-MM-DD hh:mm:ss -0000
-categories: CATEGORY-1 CATEGORY-2
+title: "Deep contextualized word representation"
+date: 2020-07-26 20:53:00 -0000
+categories: NLP RNN
 
 # Deep contextualized word representation
 
