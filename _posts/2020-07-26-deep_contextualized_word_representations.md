@@ -1,8 +1,3 @@
-layout: page
-title: "Deep contextualized word representation"
-date: 2020-07-26 20:53:00 -0000
-categories: NLP RNN
-
 # Deep contextualized word representation
 
 ## What's the problem
