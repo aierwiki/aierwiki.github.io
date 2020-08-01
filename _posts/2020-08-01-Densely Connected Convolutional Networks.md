@@ -12,15 +12,15 @@
 
 ### What to do
 
-- Whereas traditional convolutional networks with L layers have L connections -- one between each layer and its subsequent layer --our network has $\frac{L(L+1)}{2}$ direct connections.
+- Whereas traditional convolutional networks with L layers have L connections -- one between each layer and its subsequent layer --our network has $$\frac{L(L+1)}{2}$$ direct connections.
 
 - we connect all layers (with matching feature-map sizes) directly with each other. To preserve the feed-forward nature, each layer obtains additional inputs from all preceding layers and passes on its own feature-maps to allsequent layers.
 
 - In contrast to ResNets, we never combine features through summation before they are passed into a layer; instead, we combine features by concatenating them.
 
-- This introduces $\frac{L(L+1)}{2}$ connections in an L-layer network, instead of just L, as in traditional architectures.
+- This introduces $$\frac{L(L+1)}{2}$$ connections in an L-layer network, instead of just L, as in traditional architectures.
 
-- Consequently, the $\mathcal{l}^{th}$ layer receives the feature-maps of all preceding layers, $x_0,...,x_{l-1}$, as input:
+- Consequently, the $$\mathcal{l}^{th}$$ layer receives the feature-maps of all preceding layers, $$x_0,...,x_{l-1}$$, as input:
 
   $$x_l=H_l([x_0, x_1, ...,x_{l-1}])$$
 
