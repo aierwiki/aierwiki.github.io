@@ -45,3 +45,5 @@
 - substantially reduce the number of parameters
 - Besides better parameter efficiency, one big advantage of DenseNets is their improved flow of information and gradients throughout the network, which makes them easy to train.
 - Dense connections have a regularizing effect, which reduces overfitting on tasks with smaller training set sizes.
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
